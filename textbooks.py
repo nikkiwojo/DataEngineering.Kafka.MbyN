@@ -29,6 +29,27 @@ def textbook_list(id):
 
     return textbooks[id]
 
+# Determines which class(es) uses the specified textbook
+def classList(id):
+    classes = {
+        1:'College_Algebra',
+        2:'Statistics_1',
+        3:'Pre_Calculus, Trigonometry',
+        4:'Calculus1, Calculus2, Calculus3',
+        5:'English_Composition',
+        6:'English_Literature',
+        7:'Theater_101',
+        8:'World_History1, World_History2',
+        9:'US_Government',
+        10:'Intro_Psychology',
+        11:'Art_History1, Art_History2',
+        12:'Biology1, Biology2',
+        13:'Chemistry1, Chemistry2',
+        14:'Physics1, Physics2',
+        15:'Programming1',   
+    }
+
+    return classes[id]
     
 # Determines how many of each textbook is available
 def newBooks():
@@ -36,6 +57,3 @@ def newBooks():
     
 def usedBooks():
     return random.randint(25,501)
-
-def totalBooks(new, used):
-    return (new + used)

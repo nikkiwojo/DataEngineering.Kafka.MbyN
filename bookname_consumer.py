@@ -11,6 +11,5 @@ def consumer1():
         print("Textbook Needed: ", textbook_list(id_num))
         sleep(1)
 
-
 if __name__ == '__main__':
     consumer1()
