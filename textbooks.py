@@ -51,9 +51,22 @@ def classList(id):
 
     return classes[id]
     
-# Determines how many of each textbook is available
-def newBooks():
-    return random.randint(25,501)
+# Determines a cost for each book
+def newBookCost():
+    whole = random.randrange(50,250)
+    part = round(random.random(),2)
+    return whole + part
+
+# determines the cost of a used book
+def usedBookCost(new_cost):
+    used_cost = (0.8) * new_cost
+    return round(used_cost, 2)
+
+# determines the rental cost of a book
+def rentalPrice(buy_cost):
+    rental_cost = (0.5) * buy_cost
+    return round(rental_cost,2)
+
+
+
     
-def usedBooks():
-    return random.randint(25,501)
